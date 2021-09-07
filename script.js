@@ -37,6 +37,14 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
+document.querySelector('.guess').addEventListener('keyup',function (event) {
+  //event.preventDefault()
+  if(event.keyCode === 13) {
+    document.querySelector('.check').click()
+  }
+  
+})
+
 document.querySelector('.again').addEventListener('click', function () {
   myNumber = Math.trunc(Math.random() * 20) + 1;
   score = 20;
